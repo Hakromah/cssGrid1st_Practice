@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID</title>
+    <!-- <link rel="stylesheet" href="grid.css"> -->
+    <style>
+    .body{
+        margin: 0;
+        font-family: "Source Sans Pro", sans-serif;
+    }
+    
+    .header {
+        background-color: #030b39;
+        color: #fff;
+        display: flex; /*put them in line*/
+        justify-content: space-between; /*put space between them*/
+        align-items: center;
+        padding: 0 40px;
+        
+    }
+    
+    h1 a{
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    .nav a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s;
+    }
+    
+    .nav a:hover {
+        color: #c5cae9; /*hover color*/
+        transform: rotate(6deg); /* hoverover movement*/
+    }
+    
+    .nav{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    .nav li {
+        margin-left: 20px;
+    }
+    
+    .hero {
+        background-color: #c5cae9;
+        padding: 60px 45px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .hero-inner {
+        max-width: 760px; /*it let the content fit in the page even we use mobile device without creating a scrobal underneaf*/
+    }
+    
+    .hero h1 {
+        font-weight: narmal;
+        font-size: 4rem;
+        margin: 0;
+    }
+    
+    .hero p {
+        font-size: 1.18rem;
+        line-height: 1.6;  /*to put a space between the Horizontal lines (it doesn't take a mesurement)*/
+    }
+    
+    .button {
+        background-color: #102599;
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 12px;
+        border-radius: 15px;
+        font-size: 1.16;
+        display: inline-block; 
+    }
+    
+    .features {
+        background: color #e8eaf6;
+        padding: 60px 25px;
+    }
+    
+    .inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* best way to distribute the sections in grid*/
+        grid-column-gap: 45px;
+        grid-row-gap: 45px;
+    }
+    
+    .inner-item h3 {
+        color: #283593;
+        font-size: 1.5rem;
+        font-weight: normal;
+        margin: 0;
+    }
+    
+    .inner-item p {
+        margin:0;
+        line-height: 1.6;
+        color: #333;
+    }
+    
+    .footer {
+        text-align: center;
+        color: #999;
+        padding: 20px 0;
+        font-size: .99;
+    }
+</style>
+    
+</head>
+<body>
+    <div class="header">
+        <h1><a href="#">Our Logo</a></h1>
+
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+        </ul>
+    </div>
+
+
+    <div class="hero">
+        <div class="hero-inner">
+            <h1>Welcome To our Site</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, nulla deserunt ullam fugiat voluptatem dicta voluptate at sequi amet consectetur cupiditate dignissimos! Possimus a ut, accusantium illum non asperiores sed!</p>
+            <a href="#" class="button">Learn More</a>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="inner">
+            <div class="inner-item">
+                <h3>Cool Grid #1</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, velit! Neque recusandae consequuntur ullam cupiditate! Dignissimos aliquam numquam reiciendis deserunt libero neque nam, ullam modi minus, tempora dicta magnam officia!</p>
+            </div>
+            <div class="inner-item">
+                <h3>Cool Grid #2</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, velit! Neque recusandae consequuntur ullam cupiditate! Dignissimos aliquam numquam reiciendis deserunt libero neque nam, ullam modi minus, tempora dicta magnam officia!</p>
+            </div>
+            <div class="inner-item">
+                <h3>Cool Grid #3</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, velit! Neque recusandae consequuntur ullam cupiditate! Dignissimos aliquam numquam reiciendis deserunt libero neque nam, ullam modi minus, tempora dicta magnam officia!</p>
+            </div>
+            <div class="inner-item">
+                <h3>Cool Grid #4</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, velit! Neque recusandae consequuntur ullam cupiditate! Dignissimos aliquam numquam reiciendis deserunt libero neque nam, ullam modi minus, tempora dicta magnam officia!</p>
+            </div>
+            <div class="inner-item">
+                <h3>Cool Grid #5</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, velit! Neque recusandae consequuntur ullam cupiditate! Dignissimos aliquam numquam reiciendis deserunt libero neque nam, ullam modi minus, tempora dicta magnam officia!</p>
+            </div>
+            <div class="inner-item">
+                <h3>Cool Grid #6</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, velit! Neque recusandae consequuntur ullam cupiditate! Dignissimos aliquam numquam reiciendis deserunt libero neque nam, ullam modi minus, tempora dicta magnam officia!</p>
+            </div>
+            <div class="inner-item">
+                <h3>Cool Grid #7</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, velit! Neque recusandae consequuntur ullam cupiditate! Dignissimos aliquam numquam reiciendis deserunt libero neque nam, ullam modi minus, tempora dicta magnam officia!</p>
+            </div>
+            <div class="inner-item">
+                <h3>Cool Grid #8</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, velit! Neque recusandae consequuntur ullam cupiditate! Dignissimos aliquam numquam reiciendis deserunt libero neque nam, ullam modi minus, tempora dicta magnam officia!</p>
+            </div>
+            <div class="inner-item">
+                <h3>Cool Grid #9</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, velit! Neque recusandae consequuntur ullam cupiditate! Dignissimos aliquam numquam reiciendis deserunt libero neque nam, ullam modi minus, tempora dicta magnam officia!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2022 Fictional Company</p>
+    </div>
+</body>
+</html>
